@@ -5,5 +5,5 @@ package com.gt.op
   * 抽象排序类
   */
 abstract class BaseSort {
-  def sort[T](list: List[T]): List[T]
+  def sort(input_data: Array[Int]): Array[Int]
 }
