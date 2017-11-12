@@ -9,18 +9,22 @@ object MainSort {
 
   def main(args: Array[String]): Unit = {
     val total = 100000
-    val input_data = (0 to total).map(x => (new Random()).nextInt(total)).toArray
+    val input_data = (0 to total).map(x => new Random().nextInt(total)).toArray
     println(s"一共有${total}个数字")
 
-    val start = new Date()
+    val start1 = new Date()
     val bs = new BubbleSort()
+
     bs.sort(input_data)
-    val end = new Date()
-    println(s"bubble sort cost ${(end.getTime-start.getTime)/1000.0}s")
+    val end1 = new Date()
+    println(s"bubble sort cost ${(end1.getTime-start1.getTime)/1000.0}s")
 
+    val start2 = new Date()
+    val ms = new MergeSort()
 
-
-
+    ms.sort(input_data)
+    val end2 = new Date()
+    println(s"merge sort cost ${(end2.getTime-start2.getTime)/1000.0}s")
   }
 
 }

@@ -23,3 +23,7 @@ class BubbleSort extends BaseSort{
 
 }
 
+object BubbleSort{
+
+}
+
